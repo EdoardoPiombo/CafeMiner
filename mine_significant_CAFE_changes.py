@@ -16,7 +16,7 @@ output = args.output
 
 
 
-#I load a dataframe with the Pvalues calculated at each not for each family
+#I load a dataframe with the Pvalues calculated at each node for each family
 prob = pd.read_csv(f"{CAFEfold}/Base_branch_probabilities.tab", sep = '\t', index_col='FamilyID')
 #I turn 'N/A' into 1
 prob.applymap(lambda x: float(1) if x == 'N/A' else x)
